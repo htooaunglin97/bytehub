@@ -26,9 +26,7 @@ const PaymentScreen = () => {
     e.preventDefault();
     dispatch(savePaymentMethod(paymentMethod));
     navigate('/placeorder');
-	};
-	
-	
+  };
 
   return (
     <FormContainer>
@@ -57,6 +55,7 @@ const PaymentScreen = () => {
               label='Card Payment (Credit or Visa)'
               id='Card-Payment'
               name='paymentMethod'
+              disabled
               value='2c2p'
               onChange={(e) => setPaymentMethod(e.target.value)}
             ></Form.Check>
